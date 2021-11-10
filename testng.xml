@@ -1,0 +1,25 @@
+<suite name="All Test Suite" parallel="classes" thread-count="4">
+    <parameters>
+        <!--                <parameter name="browser" value="Chrome"/>-->
+        <!--                <parameter name="driverexe" value="C:/chromedriver.exe"/>-->
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="driverexe" value="C:/Geckodriver.exe"/>
+    </parameters>
+    <groups>
+        <run>
+            <include name="P0"/>
+            <include name="P1"/>
+        </run>
+    </groups>
+    <test verbose="2" preserve-order="true" name="JqueryUITests">
+        <classes>
+            <parameters>
+                <parameter name="x" value="200"/>
+                <parameter name="y" value="200"/>
+            </parameters>
+            <class name="DraggableTest"/>
+            <class name="DroppableTest"/>
+            <class name="DemoTest"/>
+        </classes>
+    </test>
+</suite>

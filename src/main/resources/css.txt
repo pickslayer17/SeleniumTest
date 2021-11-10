@@ -1,0 +1,47 @@
+TagName[Att1='Value']
+
+id -> # (hash)
+input#MathcedID
+class -> .(dot)
+tagName.value
+
+input[data-testid*='email']
+input[data-testid^='email']
+input[data-testid$='ail']
+
+^ starts-with !
+$ ends-with !
+* consists
+^*$
+
+Multiple attributes
+
+TagName[Att1=Value][Att2=Value2] and
+tagName[Att1=Value],[Att2=Value2] or
+
+ADVANCED\
+
+div[class] all div nodes contain class attribute
+[class] all the nodes contains class attribute
+
+a,li - all the nodes a and li AND
+a[class], li - all links with class attribute AND li
+node node (space between) return all descendants - #some_id * - returns all descendants of element with id=some_id
+node>node - children
+node+node - next sibling(Only one)
+node~node - all next siblings
+
+node1:first-child
+node1:last-child
+node1:nth-child(n)
+
+
+CSS VALUES
+
+background-color
+color
+font-size
+font / font-family
+height
+width
+

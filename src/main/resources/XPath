@@ -1,0 +1,52 @@
+1. Using 'and' Operator
+Syntax:
+//TagName[@Att1='Value' and @Att2='Value2']
+//TagName[@Att1='Value' and Text()='Value2']
+
+2. Using 'or' Operator
+Syntax:
+//TagName[@Att1='Value' or @Att2='Value2']
+//TagName[@Att1='Value' or Text()='Value2']
+
+3. Using 'contains'
+Syntax:
+//TagName[contains(@Att, 'Partial_Value')]
+//TagName[contains(Text(), 'Partial_Text')]
+
+4. Using 'contains'
+Syntax:
+//TagName[starts-with(@Att, 'Partial_Value')]
+//TagName[starts-with(Text(), 'Partial_Text')]
+
+5. Combine
+//div[contains(@class, 'button') and starts-with(text(), 'Log']
+*//[@class='well'] - any
+
+
+
+child/Parents
+
+//div[@id='hz']/child::* - all matching child nodes
+//div[@id='hz']/child::span (or p, or div)
+//div[@id='hz']/child::div[1]
+//div[@id='hz']/parent::*
+
+ancestor/descendant
+ancestor - all parents
+descendant - all child
+//div[@id='hz']/descendant::div[2]
+//div[conditions]/ancestor::* div
+
+Preceding/Following relationship
+
+preceding - everything before, apart from ancestors
+preceding-sibling - only siblings before current
+
+//div[starts-with(text(), 'aa')]/following::* - the same
+//div[starts-with(text(), 'aa')]/following-sibling::
+
+
+absolute xpath:
+/html/body/div[2]/div/..
+absolute and relative combined
+//div[@id='as_1']/div[3]/div/..
